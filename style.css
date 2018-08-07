@@ -1,0 +1,18 @@
+
+
+body {
+background-color: #585858
+}
+
+div {
+    position: absolute;
+
+    font-size: 20px;
+    background-image: -webkit-linear-gradient(left, #000, #000, #000, #585858, rgb(232, 185, 7));
+    top:200px;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transform: rotate(90deg)
+
+}
