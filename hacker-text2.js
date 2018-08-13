@@ -1,7 +1,12 @@
+
 function criaElementos() {
-    const horizontal = Math.trunc(innerWidth/40) - 2;
+    const horizontal = Math.trunc(innerWidth / 40) - 2;
     let div;
     let text;
+
+    let botao = document.getElementById('botao')
+    botao.style.display = "none"
+    console.log(botao);
 
     for (let i = 0; i < horizontal; i++) {
         div = document.createElement('div');
@@ -18,7 +23,11 @@ function criaElementos() {
 }
 
 async function trocaSimbolo(palavra, position) {
-    const simbolos = ['石室诗士施氏', '誓食十狮十狮', '施氏时视狮市', '室诗士施誓食'];
+    const simbolos = [
+        '⎎⟟⌰⟟⌿⟒  ⏃⍜⎅⏃⎎⟟⌰⟟⌿⟒ é ⏃⍜⎅⏃',
+        '⎎⟟⌰⟟⌿⟒ ⟒ ⌰⟒☌⏃⌰⎎⟟⌰⟟⌿⟒ ⟒ ⌰⟒☌⏃⌰',
+        ' ⍙⟟⏁⊑ ⌿⍀⍜⌰⟒⋔⌇⍙⟟⊑ ⌿⍀⍜⌰⟒⋔⌇',
+        '⎎⎍☊☍ ⎍ ⏃⌰⟟⟒⋏⌇⎎⎍☊☍ ⎍ ⏃⌰⟟⟒⋏⌇ ⎍'];
     for (let i = 0; i < simbolos.length; i++) {
         if (i == simbolos.length - 1) {
             if (position >= innerHeight) {
