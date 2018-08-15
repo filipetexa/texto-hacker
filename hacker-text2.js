@@ -1,12 +1,12 @@
 
 function criaElementos() {
-    const horizontal = Math.trunc(innerWidth / 40) - 2;
+    const horizontal = Math.trunc(innerWidth / 40)- 3;
     let div;
     let text;
+    let position; 
 
     let botao = document.getElementById('botao')
     botao.style.display = "none"
-    console.log(botao);
 
     for (let i = 0; i < horizontal; i++) {
         div = document.createElement('div');
@@ -14,8 +14,8 @@ function criaElementos() {
         div.setAttribute('tx-hacker', 'tx-value');
         div.appendChild(text);
         div = document.body.appendChild(div);
-        div.style.left = `${i * 40}px`
-        let position = Math.random() * innerHeight;
+        div.style.left = `${i * 40 - 150}px`
+        position = Math.random() * innerHeight;
         div.style.top = `${position}px`;
         trocaSimbolo(div, position);
     }
@@ -23,11 +23,12 @@ function criaElementos() {
 }
 
 async function trocaSimbolo(palavra, position) {
-    const simbolos = [
-        '⎎⟟⌰⟟⌿⟒  ⏃⍜⎅⏃⎎⟟⌰⟟⌿⟒ é ⏃⍜⎅⏃',
-        '⎎⟟⌰⟟⌿⟒ ⟒ ⌰⟒☌⏃⌰⎎⟟⌰⟟⌿⟒ ⟒ ⌰⟒☌⏃⌰',
-        ' ⍙⟟⏁⊑ ⌿⍀⍜⌰⟒⋔⌇⍙⟟⊑ ⌿⍀⍜⌰⟒⋔⌇',
-        '⎎⎍☊☍ ⎍ ⏃⌰⟟⟒⋏⌇⎎⎍☊☍ ⎍ ⏃⌰⟟⟒⋏⌇ ⎍'];
+    const simbolos = [  'こんにちは、私は悟空です。',
+                        '私の名前はフィリップです。',
+                        ' 私はマランドゥーロ才で' ]
+
+
+
     for (let i = 0; i < simbolos.length; i++) {
         if (i == simbolos.length - 1) {
             if (position >= innerHeight) {
